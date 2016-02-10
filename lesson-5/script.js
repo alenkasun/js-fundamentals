@@ -1,8 +1,10 @@
 var globalVar = 'This is global variable';
 
 var globalFunction = function(){
-	alert(globalVar);
-	globalVar = 'Value has beev modified';
+	var localVar = 'This is local variable';
+
+	alert(localVar);
+	globalVar = 'Global value has beev modified';
 }
 
 globalFunction();
