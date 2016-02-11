@@ -1,6 +1,8 @@
 var obj = "This is a string object.",
 	length = obj.length,
-	newString = obj.replace("object", "value");
+	newString = obj.replace("object", "value"),
+	allBig = obj.toUpperCase(),
+	allSmall = obj.toLowerCase();
 
-alert(newString);
-alert(obj);
+alert(allBig);
+alert(allSmall);
