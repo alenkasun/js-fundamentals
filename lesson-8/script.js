@@ -1,5 +1,5 @@
-var arr = new Array(11, "hello", true);
+var arr = [11, "hello", true];
     len = arr.length,
 
-arr[0] = 12;
+arr[3] = "new element";
 alert(len);
