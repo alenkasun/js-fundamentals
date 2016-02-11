@@ -1,10 +1,7 @@
 var obj = "This is a string object.",
 	length = obj.length,
-	pos1 = obj.indexOf("This"),
-	pos2 = obj.indexOf("is"),             // 2
-	pos3 = obj.indexOf("is", pos2 + 1);   // 5 
-	pos4 = obj.indexOf("this"),           // -1
-	pos5 = obj.lastIndexOf("is"),         // 5
-	pos6 = obj.lastIndexOf("is", pos5 - 1);
+	sub1 = obj.substr(0, 4),         // This
+	sub2 = obj.substr(10, 6),        // string
+	sub3 = obj.substr(0, 3);         // Thi
 
-console.log(pos6);
+console.log(sub3);
