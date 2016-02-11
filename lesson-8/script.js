@@ -1,6 +1,9 @@
-var arr = [11, "hello", true];
-    len = arr.length,
+var cats = ["Mimi", "Blue"],
+    dogs = ["Dolly", "Bars"];
 
-arr[arr.length] = "a new value";
-arr.push("the best conditions");
-alert(arr[arr.length - 1]);
+var animals = cats.concat(dogs),
+    joined = animals.join(" "),
+    reversed = cats.reverse(),
+    sorted = animals.sort();
+
+alert(reversed);
