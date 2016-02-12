@@ -1,3 +1,9 @@
 var foo = "hello, window";
 
-alert(window.foo);
+var bar = function() {
+	var foo = "hello, function";
+
+	alert(window.foo);
+};
+
+bar();
