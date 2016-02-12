@@ -1,7 +1,5 @@
-var move = ["up", "down", "forward", "back"];
+var move = [];
 
-while (move.length) {
-	alert(move.pop());
-}
-
-alert("hi");
+do {
+	alert(move.pop());   // undefined
+} while (move.length)
