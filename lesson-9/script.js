@@ -1,6 +1,5 @@
-var foo = 5 < 6,
-	bar = "6" == 6,
-	num = "6" === 6,
-	str = "hello" == "Hello";
+if (5 < 6) {
+	alert("5 is less than 6");
+}
 
-alert(str);
+alert("This is outside of the if statement");
