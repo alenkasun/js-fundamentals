@@ -1,7 +1,7 @@
 (function(){
 
-var pElement = document.getElementById("foo1"); 
+var pElement = document.querySelector("p");   // find first p-element
 
-alert(pElement);  // null
+alert(pElement.parentNode.tagName); 
 
 }());
