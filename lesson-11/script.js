@@ -1,9 +1,13 @@
+(function(){
+
 var foo = "hello, window";
 
 var bar = function() {
-	var foo = "hello, function";
+	var foo = "Hello, function";
 
-	alert(window.foo);
+	alert(window.foo);  // undefined !!!
 };
 
 bar();
+
+}());
