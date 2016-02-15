@@ -1,10 +1,13 @@
 (function(){
 
-var divFoo = document.getElementById("foo");
+var divFoo = document.getElementById("foo"),
+	style = divFoo.style;
 
-divFoo.style.color = "green";
-divFoo.style.border = "1px solid black";
-divFoo.style.backgroundColor = "yellow";
-divFoo.style.padding = "2px";
+// style.color = "green";
+style.border = "1px solid black";
+style.backgroundColor = "yellow";
+style.padding = "2px";
+
+alert(style.color);   // empty alert popup
 
 }());
