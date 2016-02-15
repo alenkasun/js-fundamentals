@@ -1,13 +1,15 @@
 (function(){
 
-var el = document.createElement("p"),
-	content = document.createTextNode("<strong>This was dynamically created</strong>");
+var doc = document,
+    el = doc.createElement("p"),
+	content = doc.createTextNode("<strong>This was dynamically created</strong>");
+	pFoo = doc.getElementById("foo");
 
 el.appendChild(content);
 el.setAttribute("align", "center");
 el.id = "bar";
 
-document.body.appendChild(el);
+pFoo.parentNode.appendChild(el);
 
 
 }());
