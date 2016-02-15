@@ -1,12 +1,12 @@
 (function(){
 
 var speed = 2000,
-	doSumthing = function(){
+	doSomething = function(){
 	console.log("doSomething() executed !!!");
 	setTimeout(doSomething, speed);
 };
 
-setTimeout(doSumthing, speed);
+setTimeout(doSomething, speed);
 
 alert("There is no delay: setTimeout executes async")
 
