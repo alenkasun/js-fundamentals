@@ -1,12 +1,7 @@
 (function(){
 
-var pElements = document.getElementsByTagName("p"), // NodeList
-	lastPElement = pElements[pElements.length - 1];
+var pElement = document.getElementById("foo");
 
-for (var i = 0, len = pElements.length; i < len; i++) {
-	alert(pElements[i]);
-}
-
-console.log(lastPElement);
+console.log(pElement);
 
 }());
