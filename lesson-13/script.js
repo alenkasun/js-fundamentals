@@ -9,7 +9,7 @@ el.appendChild(content);
 el.setAttribute("align", "center");
 el.id = "bar";
 
-pFoo.parentNode.appendChild(el);
-
+pFoo.parentNode.insertBefore(el, pFoo);
+//pBar.parentNode.replaceChild(el, pBar);
 
 }());
