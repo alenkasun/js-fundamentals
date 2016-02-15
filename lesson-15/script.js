@@ -10,8 +10,7 @@ var speed = 500,
 	}
 };
 
-setTimeout(doSomething, speed);
-
-alert("There is no delay: setTimeout executes async")
+var timer = setTimeout(doSomething, speed);  // never been executed
+clearTimeout(timer);
 
 }());
