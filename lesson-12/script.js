@@ -1,7 +1,11 @@
 (function(){
 
-var pElement = document.querySelector("p");   // find first p-element
+var pElements = document.querySelectorAll("p"),
+	pElement = document.querySelectorAll("div p"),
+	pFooElement = document.querySelector("#foo");
 
-alert(pElement.parentNode.tagName); 
+alert(pElements.length); 
+alert(pFooElement.parentNode.tagName);
+console.log(pElement); 
 
 }());
