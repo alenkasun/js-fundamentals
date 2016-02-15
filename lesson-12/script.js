@@ -1,7 +1,7 @@
 (function(){
 
-var pElement = document.getElementById("foo");
+var pElement = document.getElementById("foo1"); 
 
-console.log(pElement);
+alert(pElement);  // null
 
 }());
