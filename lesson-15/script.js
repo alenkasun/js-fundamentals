@@ -1,15 +1,18 @@
 (function(){
 
-var speed = 500,
-	i = 0,
-	doSomething = function(){
-	console.log("doSomething() executed " + (i + 1) + " times !!!");
-	i++;
-	if (i > 9) {
-		clearInterval(timer);
-	}
+var speed = 10,
+	moveBox = function(){
+		var el = document.getElementById("box"),
+			left = el.offsetLeft,
+			moveBy = 3;
+
+		el.style.left = left + moveBy + "px";			
+
+		if (left > 399) {
+			clearInterval(timer);
+		}	
 };
 
-var timer = setInterval(doSomething, speed);
+var timer = setInterval(moveBox, speed);
 
 }());
