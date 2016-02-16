@@ -2,11 +2,14 @@
 
 onload = function () {
 
-	var el = document.getElementById("box");
+	var buttons = document.getElementsByTagName("button");
 
-	el.onclick = function() {
-		this.style.backgroundColor = "red";
-	};
+	for (var i = 0, len = buttons.length; i < len; i++) {
+		buttons[i].onclick = function() {
+			var className = this.innerHTML.toLowerCase();
+			document.body.className = className;
+		};
+	}
 
 }
 
