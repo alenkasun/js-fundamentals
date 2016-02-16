@@ -8,3 +8,14 @@ var addEvent = function(el, type, fn) {
 	}
 
 };
+
+var removeEvent = function(el, type, fn) {
+	if(typeof removeEventListener !== 'undefined') {
+		el.removeEventListener(type, fn, false);
+	} else if (typeof detachEvent !== 'undefined') {
+		el.detachEvent("on" + type, fn);
+	} else {
+		el["on" + type] = null;
+	}
+
+};

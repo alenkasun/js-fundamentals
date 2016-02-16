@@ -7,6 +7,7 @@
 
 	for (var i = 0, len = buttons.length; i < len; i++) {
 		addEvent(buttons[i], "click", buttonClick);
+		removeEvent(buttons[i], "click", buttonClick);
 	}
 
 }());
