@@ -28,3 +28,10 @@ var getTarget = function(event) {
 	}
 };
 
+var preventDefault = function(event) {
+	if (typeof event.preventDefault !== "undefined") {
+		event.preventDefault();
+	} else {
+		event.returnValue = false;
+	}
+};
