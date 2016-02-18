@@ -19,3 +19,12 @@ var removeEvent = function(el, type, fn) {
 	}
 
 };
+
+var getTarget = function(event) {
+	if (typeof event.target !== "undefined"){
+		return event.target;
+	} else {
+		return event.srcElement;
+	}
+};
+
