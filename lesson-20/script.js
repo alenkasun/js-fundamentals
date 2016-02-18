@@ -3,14 +3,22 @@
 eventUtility.addEvent(document, "click", function (evt){
 	var target = eventUtility.getTarget(evt),
 		tagName = target.tagName,
-		classData = target.getAttribute("data-body-class");
-
-		alert(classData);
+		classData = target.getAttribute("data-body-class");	
 
 	if (classData) {
-		var className = target.innerHTML.toLowerCase();
 		eventUtility.preventDefault(evt);
-		document.body.className = className;
+		document.body.className = "";
+	}		
+});
+
+eventUtility.addEvent(document, "mouseover", function (evt){
+	var target = eventUtility.getTarget(evt),
+		tagName = target.tagName,
+		classData = target.getAttribute("data-body-class");
+
+	if (classData) {
+		eventUtility.preventDefault(evt);
+		document.body.className = classData;
 	}		
 });
 
