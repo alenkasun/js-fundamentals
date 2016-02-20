@@ -1,6 +1,13 @@
 var xhr = new XMLHttpRequest();
 
-xhr.open("GET", "rss.json.txt", true);  // async
+var person = {
+	firstName: "John",
+	lastName: "Doe",
+	age: 47
+};
+
+xhr.open("POST", "rss.json.txt", true);  // async
+xhr.setRequestHeader("Content-Type", "application/json");
 
 xhr.onreadystatechange = function(){
 		if(xhr.readyState === 4) {
@@ -16,4 +23,4 @@ xhr.onreadystatechange = function(){
 	}
 };
 
-xhr.send(null);
+xhr.send(JSON.stringify(person));
