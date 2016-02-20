@@ -8,8 +8,8 @@ xhr.onreadystatechange = function(){
 
 		if((status  >= 200 && status < 300)||(status === 304)){
 			var rss = JSON.parse(xhr.responseText);
-			alert(rss.channel.title);
-			alert(rss.channel.items[0].description);
+			var json = JSON.stringify(rss);
+			alert(json);
 		} else {
 			alert("Something bad happened!!!");
 		}
