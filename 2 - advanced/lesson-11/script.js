@@ -1,15 +1,12 @@
-localStorage.firstName = "Alyona";
-localStorage.setItem("lastName", "Shevchenko");
+var person = {
+	firstName: "John",
+	lastName: "Doe",
+	age: 47
+};
 
-alert(localStorage.firstName + " " + localStorage.getItem("lastName"));
+localStorage.person = JSON.stringify(person);
+var personObj  = JSON.parse(localStorage.person)
 
-localStorage.removeItem("lastName");
-alert(localStorage.lastName);    // undefined
+alert(personObj.firstName + " " + personObj.lastName);
 
 localStorage.clear();
-
-
-// Important: in localStorage all data are string
-localStorage.age = 47;
-alert(typeof localStorage.age);   // string
-var age = parseInt(localStorage.age, 10);
