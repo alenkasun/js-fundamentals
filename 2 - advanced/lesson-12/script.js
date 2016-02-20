@@ -6,6 +6,8 @@
     } catch(err) {
         alert("An error occurred. Please try again later");
         alert(err.message);
+    } finally {  // this block always executes
+        alert("This is within finally");
     }
 
 }());
