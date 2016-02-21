@@ -7,8 +7,11 @@ eventUtility.addEvent(form, "submit", function(){
     eventUtility.preventDefault();
 });
 
-eventUtility.addEvent(button, "click", function(){
-    alert("You clicked me!");
+eventUtility.addEvent(button, "click", function(evt){
+    var target = eventUtility.getTarget(evt);
+    target.disabled = true;   // lock access to the button
+    alert("type: " + target.type + " | value: " + target.value);
+    target.disabled = false;
 });
 
 }());
