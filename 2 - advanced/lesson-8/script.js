@@ -1,9 +1,8 @@
 (function(){
 
 var form = document.getElementById("theForm"),  // to retrieve data from form elements
-    button = form.myButton,       // retrieve button input element by name
-    textbox = form.myTextbox,
-    textarea = form.myTextArea;
+    button = form.myButton,
+    select = form.dayOfWeek;       // retrieve button input element by name
 
 eventUtility.addEvent(form, "submit", function(){
     eventUtility.preventDefault();
@@ -12,15 +11,9 @@ eventUtility.addEvent(form, "submit", function(){
 eventUtility.addEvent(button, "click", function(evt){
     var target = eventUtility.getTarget(evt);
     
-    if (textbox.value === "") {
-        alert("please input data in box");
-        textbox.focus();
-    }
-
-    if (textarea.value === "") {
-        alert("please input data in large box");
-    }
-
+    var index = select.selectedIndex;
+    var option = select.options[index];
+    alert(option.value);
 });
 
 }());
