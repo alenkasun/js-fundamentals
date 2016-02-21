@@ -13,7 +13,12 @@ eventUtility.addEvent(button, "click", function(evt){
     
     var index = select.selectedIndex;
     var option = select.options[index];
-    alert(option.value);
+    
+    select.remove(3);
+    var wedOption = new Option("Wednesday", 3);
+    //select.options[select.options.length] = wedOption;
+    //select.options[3] = wedOption;
+    select.add(wedOption, select.options[1]);
 });
 
 }());
