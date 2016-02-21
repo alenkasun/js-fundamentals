@@ -10,14 +10,14 @@ eventUtility.addEvent(form, "submit", function(){
 
 eventUtility.addEvent(button, "click", function(evt){
     var target = eventUtility.getTarget(evt),
-        pickedColors = [];
+        pickedColor = "";
 
     for(var i = 0, l = color.length; i < l; i++) {
         if(color[i].checked){
-            pickedColors.push(color[i].value);
+            pickedColor = color[i].value;
         }
     }
-    alert(pickedColors.join(", "));
+    alert(pickedColor);
 });
 
 }());
