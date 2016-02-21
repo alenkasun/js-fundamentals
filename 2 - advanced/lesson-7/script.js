@@ -2,18 +2,14 @@
 
 var txtbox = document.getElementById("txtInput");
 
-eventUtility.addEvent(txtbox, "keypress", function(evt){
-    var code = eventUtility.getCharCode(evt);
-    // A 65
-    // B 66
-    // Z 90
-    // a 97
-    // z 122
+eventUtility.addEvent(document, "keydown", function(evt){
+    var code = evt.keyCode,          // code
+        altKey = evt.altKey,         // true/false
+        ctrlKey = evt.ctrlKey,       // true/false
+        shirftKey = evt.shirftKey;   // true/false
 
-    if ((code >= 65 && code <= 90)&&(code >= 97 && code <= 122)) {
-        alert(code);
-    }else {
-        eventUtility.preventDefault();
+    if (ctrlKey && code === 66) {
+        alert("You pressed ctrl+B");
     }
 
 });
